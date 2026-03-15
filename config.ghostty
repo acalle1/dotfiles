@@ -1,0 +1,20 @@
+# Cursor
+cursor-style = block
+shell-integration-features = no-cursor
+mouse-hide-while-typing = true
+window-save-state = always
+
+# aesthetics
+# background-opacity = 0.85
+# background-blur=16
+# background=#000000
+macos-titlebar-style = hidden
+term = "xterm-256color"
+theme = TokyoNight
+
+# typography
+font-family = JetBrainsMono
+font-size=16
+font-thicken=true
+font-thicken-strength=1
+adjust-cell-height=1
