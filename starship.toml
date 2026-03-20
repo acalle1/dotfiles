@@ -1,1 +1,24 @@
-.config/starship.toml
+format = """
+$directory$git_branch$git_status$hostname
+$character"""
+
+[directory]
+style = "bold cyan"
+truncation_length = 3
+truncate_to_repo = false
+
+[git_branch]
+style = "bold green"
+
+[git_status]
+style = "bold green"
+
+[hostname]
+ssh_only = true
+format = "on [$hostname]($style) "
+style = "bold red"
+disabled = false
+
+[character]
+success_symbol = "[→](bold green)"
+error_symbol = "[→](bold red)"
