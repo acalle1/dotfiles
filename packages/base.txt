@@ -1,0 +1,9 @@
+bat
+fastfetch
+fd-find
+fzf
+mise
+neovim
+ripgrep
+stow
+tree
