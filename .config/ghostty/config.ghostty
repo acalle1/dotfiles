@@ -1,20 +1,29 @@
-# Cursor
-cursor-style = block
-shell-integration-features = no-cursor
-mouse-hide-while-typing = true
-window-save-state = always
-
-# aesthetics
-# background-opacity = 0.85
-# background-blur=16
-# background=#000000
-macos-titlebar-style = hidden
-term = "xterm-256color"
-theme = TokyoNight
+# Font setup for icons and readability
+font-family = JetBrainsMono Nerd Font
 
 # typography
-font-family = JetBrainsMono Nerd Font
 font-size=16
 font-thicken=true
 font-thicken-strength=1
 adjust-cell-height=1
+
+# Best theme ever
+theme = TokyoNight
+
+# For transparency
+background-opacity = 0.95
+
+# Cursor preferences
+cursor-style = "block"
+cursor-style-blink = true
+shell-integration-features = "no-cursor"
+mouse-hide-while-typing = true
+window-save-state = always
+
+# Window size and padding
+window-width = 115
+window-height = 45
+window-padding-y = 0,1
+window-padding-x = 1,1
+
+gtk-titlebar = false
