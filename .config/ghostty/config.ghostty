@@ -27,3 +27,7 @@ window-padding-y = 0,1
 window-padding-x = 1,1
 
 gtk-titlebar = false
+
+# Send Ctrl+W for Ctrl+Backspace so word-delete works in apps that don't
+# use Readline (e.g. Claude Code), not just the shell
+keybind = ctrl+backspace=text:\x17
