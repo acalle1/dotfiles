@@ -143,6 +143,9 @@ in
     };
   };
 
+  # Installs the home-manager CLI itself, so rebuild.sh can call it directly.
+  programs.home-manager.enable = true;
+
   # Nix installs mise; mise still manages per-project JVM tools (java, gradle, maven, sbt, scala).
   programs.mise = {
     enable = true;
