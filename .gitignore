@@ -1,1 +1,5 @@
 .nvimlog
+
+# nix build output
+result
+result-*
