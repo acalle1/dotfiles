@@ -11,6 +11,7 @@ Modeled on [kunchenguid/dotfiles](https://github.com/kunchenguid/dotfiles), adap
 - mise (still manages per-project JVM tools)
 - Ghostty and tmux configs, symlinked from `home/`
 - Global agent instructions (`home/AGENTS.md` -> `~/.claude/CLAUDE.md`)
+- Claude Code status line (`home/.claude/statusline.sh` -> `~/.claude/statusline.sh`)
 - A declared list of system/GUI packages that stay on dnf and flatpak (`packages/`)
 
 ## Fresh-machine setup

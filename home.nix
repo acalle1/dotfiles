@@ -152,6 +152,9 @@ in
     globalConfig.tools.usage = "latest";
   };
 
+  # Week numbers in the GNOME top-bar calendar.
+  dconf.settings."org/gnome/desktop/calendar".show-weekdate = true;
+
   # Edit-in-place: the real file stays in my repo, ~/.config just points at it.
   home.file.".config/ghostty".source =
     config.lib.file.mkOutOfStoreSymlink "${dotfiles}/home/.config/ghostty";
@@ -159,4 +162,8 @@ in
     config.lib.file.mkOutOfStoreSymlink "${dotfiles}/home/.tmux.conf";
   home.file.".claude/CLAUDE.md".source =
     config.lib.file.mkOutOfStoreSymlink "${dotfiles}/home/AGENTS.md";
+  # Wired up by "statusLine" in ~/.claude/settings.json, which stays unmanaged
+  # because Claude Code writes to it.
+  home.file.".claude/statusline.sh".source =
+    config.lib.file.mkOutOfStoreSymlink "${dotfiles}/home/.claude/statusline.sh";
 }
