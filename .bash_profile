@@ -6,3 +6,7 @@ if [ -f ~/.bashrc ]; then
 fi
 
 # User specific environment and startup programs
+
+# >>> coursier install directory >>>
+export PATH="$PATH:/home/calle/.local/share/coursier/bin"
+# <<< coursier install directory <<<

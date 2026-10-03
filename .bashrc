@@ -11,6 +11,10 @@ if ! [[ "$PATH" =~ "$HOME/.local/bin:$HOME/bin:" ]]; then
 fi
 export PATH
 
+# >>> coursier install directory >>>
+export PATH="$PATH:/home/calle/.local/share/coursier/bin"
+# <<< coursier install directory <<<
+
 # Uncomment the following line if you don't like systemctl's auto-paging feature:
 # export SYSTEMD_PAGER=
 

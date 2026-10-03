@@ -11,7 +11,7 @@ adjust-cell-height=1
 theme = TokyoNight
 
 # For transparency
-background-opacity = 0.95
+background-opacity = 1.0
 
 # Cursor preferences
 cursor-style = "block"
