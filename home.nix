@@ -105,7 +105,7 @@ in
       add_newline = false;
       format = "$directory$git_branch$git_status$cmd_duration$line_break$character";
       character = {
-        success_symbol = "[❯](purple)";
+        success_symbol = "[❯](green)";
         error_symbol = "[❯](red)";
       };
       cmd_duration.format = "[$duration]($style) ";
@@ -157,7 +157,6 @@ in
     config.lib.file.mkOutOfStoreSymlink "${dotfiles}/home/.config/ghostty";
   home.file.".tmux.conf".source =
     config.lib.file.mkOutOfStoreSymlink "${dotfiles}/home/.tmux.conf";
-
   home.file.".claude/CLAUDE.md".source =
     config.lib.file.mkOutOfStoreSymlink "${dotfiles}/home/AGENTS.md";
 }
