@@ -5,7 +5,7 @@ Modeled on [kunchenguid/dotfiles](https://github.com/kunchenguid/dotfiles), adap
 
 ## What you get
 
-- Nix user packages (ripgrep, fd, fzf, jq, bat, fastfetch, tree, Neovim, tmux, uv, Claude Code, JetBrains Mono Nerd Font)
+- Nix user packages (ripgrep, fd, fzf, jq, bat, fastfetch, tree, Neovim, tmux, uv, JetBrains Mono Nerd Font)
 - Shell (bash, aliases, git helpers, readline bindings, starship prompt)
 - Git config
 - mise (still manages per-project JVM tools)
@@ -63,4 +63,6 @@ Run `./rebuild.sh` only when you change `home.nix` itself.
 - keyd: built from source into `/usr/local/bin`, config in `/etc/keyd/default.conf`
 - IntelliJ IDEA in `/opt`
 - npm globals in `/usr/local/lib` (`pi`, `sandbox-runtime`)
+- Claude Code: installed with its own native installer (`claude install`) into `~/.local/bin`, which `home.sessionPath` puts on PATH.
+  It self-updates, so it is deliberately not pinned to a nixpkgs release
 - Neovim config: intentionally absent, to be rewritten from scratch

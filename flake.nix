@@ -13,10 +13,7 @@
       # The one username line to change if this isn't your machine.
       user = "calle";
       system = "x86_64-linux";
-      pkgs = import nixpkgs {
-        inherit system;
-        config.allowUnfree = true; # claude-code
-      };
+      pkgs = nixpkgs.legacyPackages.${system};
     in
     {
       homeConfigurations.${user} = home-manager.lib.homeManagerConfiguration {

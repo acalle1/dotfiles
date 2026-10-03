@@ -20,12 +20,13 @@ in
     neovim
     tmux
     uv
-    claude-code
     # the font everything renders in
     nerd-fonts.jetbrains-mono
   ];
   fonts.fontconfig.enable = true;
   home.sessionVariables.EDITOR = "nvim";
+  # Claude Code is installed with its own native installer (`claude install`) so it
+  # self-updates to the latest version instead of waiting on a nixpkgs bump.
   home.sessionPath = [ "$HOME/.local/bin" ];
 
   programs.bash = {
