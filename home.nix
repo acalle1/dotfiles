@@ -116,6 +116,8 @@ in
   # sync server, no account, no update check.
   programs.atuin = {
     enable = true;
+    # Only bind ctrl-r; up arrow stays bash's normal previous-command.
+    flags = [ "--disable-up-arrow" ];
     settings = {
       auto_sync = false;
       update_check = false;
