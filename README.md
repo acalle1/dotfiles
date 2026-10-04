@@ -6,7 +6,7 @@ Modeled on [kunchenguid/dotfiles](https://github.com/kunchenguid/dotfiles), adap
 ## What you get
 
 - Nix user packages (ripgrep, fd, fzf, jq, bat, fastfetch, tree, Neovim, tmux, uv, JetBrains Mono Nerd Font)
-- Shell (bash, aliases, git helpers, readline bindings, starship prompt)
+- Shell (bash, aliases, git helpers, readline bindings, starship prompt, local-only atuin history search)
 - Git config
 - mise (still manages per-project JVM tools)
 - Ghostty and tmux configs, symlinked from `home/`

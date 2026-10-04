@@ -112,6 +112,17 @@ in
     };
   };
 
+  # Searchable shell history (ctrl-r), stored in a local sqlite db. Fully local: no
+  # sync server, no account, no update check.
+  programs.atuin = {
+    enable = true;
+    settings = {
+      auto_sync = false;
+      update_check = false;
+      sync.records = false;
+    };
+  };
+
   programs.git = {
     enable = true;
     settings = {
