@@ -66,4 +66,3 @@ Run `./rebuild.sh` only when you change `home.nix` itself.
 - npm globals in `/usr/local/lib` (`pi`, `sandbox-runtime`)
 - Claude Code: installed with its own native installer (`claude install`) into `~/.local/bin`, which `home.sessionPath` puts on PATH.
   It self-updates, so it is deliberately not pinned to a nixpkgs release
-- Neovim config: intentionally absent, to be rewritten from scratch

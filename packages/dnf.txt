@@ -8,6 +8,7 @@ helium-bin            # copr imput/helium
 code                  # packages.microsoft.com repo
 dbeaver-ce            # rpm from dbeaver.io
 bruno                 # rpm from usebruno.com
+iosevka-fixed-fonts   # copr peterwu/iosevka; default font for ghostty, vscode, intellij
 
 # containers
 docker-ce             # download.docker.com repo
@@ -28,3 +29,4 @@ git
 nodejs                # for npm-installed pi
 xclip
 wl-clipboard
+gcc                   # linker for rustup toolchains

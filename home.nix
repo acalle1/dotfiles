@@ -20,14 +20,16 @@ in
     neovim
     tmux
     uv
-    # the font everything renders in
+    tree-sitter  # CLI nvim-treesitter uses to build parsers
+    rustup    # rust toolchains (once: `rustup default stable && rustup component add rust-analyzer`)
+    # fallback for Nerd Font icon glyphs (the main font, Iosevka Fixed, is in packages/dnf.txt)
     nerd-fonts.jetbrains-mono
   ];
   fonts.fontconfig.enable = true;
   home.sessionVariables.EDITOR = "nvim";
   # Claude Code is installed with its own native installer (`claude install`) so it
   # self-updates to the latest version instead of waiting on a nixpkgs bump.
-  home.sessionPath = [ "$HOME/.local/bin" ];
+  home.sessionPath = [ "$HOME/.local/bin" "$HOME/.cargo/bin" ];
 
   programs.bash = {
     enable = true;
@@ -103,12 +105,20 @@ in
     enable = true;
     settings = {
       add_newline = false;
-      format = "$directory$git_branch$git_status$cmd_duration$line_break$character";
-      character = {
-        success_symbol = "[❯](green)";
-        error_symbol = "[❯](red)";
+      format = "$directory$git_branch$character";
+      directory = {
+        truncation_length = 1;
+        style = "bold blue";
       };
-      cmd_duration.format = "[$duration]($style) ";
+      git_branch = {
+        format = "[$branch]($style) ";
+        style = "italic purple";
+      };
+      character = {
+        # `\$` because a bare $ starts a variable in starship format strings.
+        success_symbol = "[\\$](green)";
+        error_symbol = "[\\$](red)";
+      };
     };
   };
 
@@ -171,6 +181,12 @@ in
   # Edit-in-place: the real file stays in my repo, ~/.config just points at it.
   home.file.".config/ghostty".source =
     config.lib.file.mkOutOfStoreSymlink "${dotfiles}/home/.config/ghostty";
+  home.file.".config/nvim".source =
+    config.lib.file.mkOutOfStoreSymlink "${dotfiles}/home/.config/nvim";
+  home.file.".config/Code/User/settings.json".source =
+    config.lib.file.mkOutOfStoreSymlink "${dotfiles}/home/.config/Code/User/settings.json";
+  home.file.".config/Code/User/keybindings.json".source =
+    config.lib.file.mkOutOfStoreSymlink "${dotfiles}/home/.config/Code/User/keybindings.json";
   home.file.".tmux.conf".source =
     config.lib.file.mkOutOfStoreSymlink "${dotfiles}/home/.tmux.conf";
   home.file.".claude/CLAUDE.md".source =
