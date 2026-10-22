@@ -5,10 +5,10 @@ Modeled on [kunchenguid/dotfiles](https://github.com/kunchenguid/dotfiles), adap
 
 ## What you get
 
-- Nix user packages (ripgrep, fd, fzf, jq, bat, fastfetch, tree, Neovim, tmux, uv, JetBrains Mono Nerd Font)
+- Nix user packages (ripgrep, fd, fzf, jq, bat, fastfetch, tree, Neovim, tmux, uv)
 - Shell (bash, aliases, git helpers, readline bindings, starship prompt, local-only atuin history search)
 - Git config
-- mise (still manages per-project JVM tools)
+- mise
 - Ghostty and tmux configs, symlinked from `home/`
 - Global agent instructions (`home/AGENTS.md` -> `~/.claude/CLAUDE.md`)
 - Claude Code status line (`home/.claude/statusline.sh` -> `~/.claude/statusline.sh`)
@@ -58,11 +58,3 @@ Rollback: `home-manager generations`, then run the `activate` script of the prev
 The files under `home/` are the real files.
 `home.nix` uses `mkOutOfStoreSymlink` to point paths like `~/.config/ghostty` straight at `home/.config/ghostty` in this repo, so edits apply without a rebuild.
 Run `./rebuild.sh` only when you change `home.nix` itself.
-
-## Not managed here
-
-- keyd: built from source into `/usr/local/bin`, config in `/etc/keyd/default.conf`
-- IntelliJ IDEA in `/opt`
-- npm globals in `/usr/local/lib` (`pi`, `sandbox-runtime`)
-- Claude Code: installed with its own native installer (`claude install`) into `~/.local/bin`, which `home.sessionPath` puts on PATH.
-  It self-updates, so it is deliberately not pinned to a nixpkgs release
