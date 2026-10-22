@@ -1,0 +1,32 @@
+{
+    "files.watcherExclude": {
+        "**/.bloop/**": true,
+        "**/.metals/**/*.{java,scala}": true
+    },
+    "workbench.iconTheme": "material-icon-theme",
+    "redhat.telemetry.enabled": false,
+    "editor.formatOnSave": true,
+    "metals.javaVersion": "21",
+    "metals.javaHome": "/home/calle/.local/share/mise/installs/java/21.0.2/bin/java",
+    "metals.metalsJavaHome": "/home/calle/.local/share/mise/installs/java/21.0.2/bin/java",
+    "workbench.colorTheme": "Tokyo Night Storm",
+    "editor.minimap.enabled": false,
+    "terminal.integrated.stickyScroll.enabled": false,
+    "workbench.editorAssociations": {
+        "*.md": "default",
+        "*.markdown": "default",
+        "*.pdf": "latex-workshop-pdf-hook"
+    },
+    "claudeCode.preferredLocation": "panel",
+    "claudeCode.useTerminal": true,
+    "latex-workshop.formatting.latex": "latexindent",
+    "breadcrumbs.enabled": false,
+    "editor.stickyScroll.enabled": false,
+    "editor.renderWhitespace": "none",
+    "workbench.statusBar.visible": false,
+    "window.menuBarVisibility": "compact",
+    "editor.fontFamily": "'Iosevka Fixed', monospace",
+    "terminal.integrated.fontFamily": "'Iosevka Fixed'",
+    "window.commandCenter": false,
+    "workbench.layoutControl.enabled": false
+}

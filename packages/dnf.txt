@@ -1,0 +1,32 @@
+# System and GUI packages that stay on dnf (home-manager can't own these on Fedora).
+# CLI tools belong in home.nix instead. Install with: ./bootstrap.sh
+# Third-party sources noted per line; enable those repos first on a fresh machine.
+
+# terminal + apps
+ghostty               # copr scottames/ghostty
+helium-bin            # copr imput/helium
+code                  # packages.microsoft.com repo
+dbeaver-ce            # rpm from dbeaver.io
+bruno                 # rpm from usebruno.com
+iosevka-fixed-fonts   # copr peterwu/iosevka; default font for ghostty, vscode, intellij
+
+# containers
+docker-ce             # download.docker.com repo
+docker-ce-cli
+containerd.io
+docker-buildx-plugin
+docker-compose-plugin
+
+# networking
+tailscale             # pkgs.tailscale.com repo
+
+# drivers (RPM Fusion nonfree)
+akmod-nvidia
+xorg-x11-drv-nvidia-cuda
+
+# base system tools
+git
+nodejs                # for npm-installed pi
+xclip
+wl-clipboard
+gcc                   # linker for rustup toolchains
